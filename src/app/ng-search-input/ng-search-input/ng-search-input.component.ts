@@ -21,7 +21,7 @@ export class NgSearchInputComponent implements OnInit, OnDestroy {
   @Input() searchCallback: Function;
   @Input() minLength = 3; // min length for search
   @Input() needSearchOnFocus = true;
-  @Input() needSearchOnFocusEmptyText = false;
+  @Input() onFocusMakeEmptySearch = false; // if true search on focus will be always with empty text
   @Input() placeholder: string;
   @Input() timeout = 300;
 
@@ -46,7 +46,7 @@ export class NgSearchInputComponent implements OnInit, OnDestroy {
         .filter((e: any) => {
           return e.type !== 'focus' || this.needSearchOnFocus;
         })
-        .map((e) => e.type !== 'focus' || !this.needSearchOnFocusEmptyText ? e.target.value : '')
+        .map((e) => e.type !== 'focus' || !this.onFocusMakeEmptySearch ? e.target.value : '')
         .filter((text) => {
           const result = (this.minLength === 0 &&
             (text !== textBefore || this.needSearchOnFocus)) ||
@@ -60,7 +60,7 @@ export class NgSearchInputComponent implements OnInit, OnDestroy {
         text => {
           const result = this.searchCallback(text)
           .onErrorResumeNext(Observable.of(false))
-          .filter(data => data)
+          .filter(data => data)git remote add origin git@github.com:stfalcon-studio/ng-search-input.git
 
           return result
         })
