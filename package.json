@@ -1,9 +1,9 @@
 {
   "name": "ng-search-input",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
-  "main": "./dist/lib/ng-search-input/ng-search-input.component.js",
-  "types": "./dist/lib/ng-search-input/ng-search-input.component.d.ts",
+  "main": "./dist/lib/ng-search-input.module.js",
+  "types": "./dist/lib/ng-search-input.module.d.ts",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
