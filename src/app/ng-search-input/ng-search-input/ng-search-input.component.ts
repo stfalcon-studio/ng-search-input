@@ -60,7 +60,7 @@ export class NgSearchInputComponent implements OnInit, OnDestroy {
         text => {
           const result = this.searchCallback(text)
           .onErrorResumeNext(Observable.of(false))
-          .filter(data => data)git remote add origin git@github.com:stfalcon-studio/ng-search-input.git
+          .filter(data => data)
 
           return result
         })
