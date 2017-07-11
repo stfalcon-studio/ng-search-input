@@ -22,7 +22,7 @@ export class NgSearchInputComponent implements OnInit, OnDestroy {
   @Input() minLength = 3; // min length for search
   @Input() needSearchOnFocus = true;
   @Input() onFocusMakeEmptySearch = false; // if true search on focus will be always with empty text
-  @Input() placeholder: string;
+  @Input() placeholdeк = '';
   @Input() timeout = 300;
 
   @Output() error: EventEmitter<any> = new EventEmitter();
