@@ -1,6 +1,6 @@
 {
   "name": "ng-search-input",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "license": "MIT",
   "main": "./dist/lib/ng-search-input.module.js",
   "types": "./src/app/ng-search-input/ng-search-input.module.ts",

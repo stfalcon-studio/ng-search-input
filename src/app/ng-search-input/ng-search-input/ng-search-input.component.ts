@@ -17,7 +17,7 @@ import { Subscription } from "rxjs/Subscription";
   styleUrls: ['./ng-search-input.component.css']
 })
 export class NgSearchInputComponent implements OnInit, OnDestroy {
-  @Input() value: string;
+  @Input() value = '';
   @Input() searchCallback: Function;
   @Input() minLength = 3; // min length for search
   @Input() needSearchOnFocus = true;
